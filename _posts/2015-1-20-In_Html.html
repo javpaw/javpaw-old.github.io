@@ -1,0 +1,100 @@
+---
+layout: post
+title: React Component Life Cycle Events
+---
+
+
+<p>Component lyfecicle functions can be roughtly divided into four 'events'</p>
+
+<p>Any time a component enters one of these states a group of functions is called in certain order, here is the cheat sheet:</p>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">	
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Class Creation</h3>
+			  </div>
+			  <div class="panel-body" style="font-size:0.9em;">
+			    <a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#getdefaultprops">getDefaultProps</a>
+			  </div>
+			</div>
+		</div>
+
+		<div class="col-md-3">	
+			<div class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Mounting</h3>
+			  </div>
+			  <div class="panel-body">
+			   <ul style="list-style-type:None; padding:0px; margin-left: -3px; font-size: 0.9em;">
+			    	<li> <a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#getinitialstate">getInitialState </a></li>
+			    	<li> <a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#mounting-componentwillmount">componentWillMount </a></li>
+			    	<li> <a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#render"> render </a></li>
+			    	<li> <a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#mounting-componentdidmount">componentDidMount</a></li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+
+		<div class="col-md-3">	
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Updating</h3>
+			  </div>
+			  <div class="panel-body">
+			    <ul style="list-style-type:None; padding:0px; margin-left: -3px; font-size: 0.9em;">
+			    	
+			    	<li><a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#updating-componentwillreceiveprops">componentWillReceiveProps </a></li>
+			    	<li><a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#updating-shouldcomponentupdate">shouldComponentUpdate</a></li>
+			    	<li><a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#updating-componentwillupdate">componentWillUpdate</a></li>
+			    	<li><a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#render">render</a></li>
+			    	<li><a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#updating-componentdidupdate">componentDidUpdate</a></li>
+			    </ul>
+			  </div>
+			</div>
+		</div>
+
+
+		<div class="col-md-3">	
+			<div class="panel panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Unmounting</h3>
+			  </div>
+			  <div class="panel-body">
+
+			    <ul style="list-style-type:None; padding:0px; margin-left: -3px; font-size: 0.9em;">			    	
+			    	<li><a target="_blank" href="http://facebook.github.io/react/docs/component-specs.html#unmounting-componentwillunmount">componentWillUnmount</a></li>
+			    </ul>
+
+			  </div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<h3>Class Creation</h3>
+<p>
+	An important method called during class creation is getDefaultProps, this method runs just one time, in the creation of the class, not the creation
+	of each instance of the class.
+	<br/>
+	<a href="http://jsfiddle.net/javpaw/bbbmjo22/" target="_blank"> Here a JSFiddle </a>
+</p>
+
+<h3> Mounting a component </h3>
+<p>
+	Mounting the component refers to the process of attaching an instance of a component to the DOM for the first time.
+	<br/>
+	<a href="http://jsfiddle.net/javpaw/ee7oyotw/">Here a JSFiddle that shows the order of the Mounting methods</a>
+</p>
+
+<h3> Updating A Component </h3>
+<p>
+	The same for component updating: <a href="http://jsfiddle.net/javpaw/jsa5ndg4/"> The JSFiddle </a>
+</p>
+
+<h3>Unmounting</h3>
+<p>
+	We can use the method componentWillUnmount to clean up everything before unmount the component: <a href="http://jsfiddle.net/javpaw/972awzst/1/">JSFiddle</a>
+</p>
+
